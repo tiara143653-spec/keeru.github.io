@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Keeru Media Player</title>
     
     <!-- Core Video Engine -->
@@ -44,7 +44,7 @@
             background-color: #000 !important;
         }
 
-        /* EXACT CUSTOM FLOATING CAPSULE */
+        /* EXACT CUSTOM FLOATING CAPSULE (Desktop Default) */
         .vjs-vlc-skin .vjs-control-bar {
             display: block !important;
             background: transparent !important;
@@ -82,15 +82,13 @@
         .vjs-vlc-skin .vjs-play-progress:before { display: none !important; }
 
         /* =========================================
-           SMART INTERACTIVE CONTROLS (Top Row)
+           SMART INTERACTIVE CONTROLS (Desktop Positions)
            ========================================= */
         
         .vjs-vlc-skin .vjs-play-control { 
             position: absolute !important; 
-            top: 15px !important; 
-            left: 20px !important; 
-            width: 44px !important; 
-            height: 44px !important; 
+            top: 15px !important; left: 20px !important; 
+            width: 44px !important; height: 44px !important; 
             border-radius: 50% !important; 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; 
         }
@@ -101,18 +99,13 @@
             transform: scale(1.05) !important;
         }
 
-        /* Advanced Volume Matrix Animation */
         .vjs-vlc-skin .vjs-volume-panel { 
             position: absolute !important; 
-            top: 15px !important; 
-            left: 70px !important; 
-            width: 44px !important; 
-            height: 44px !important; 
-            display: flex !important; 
-            align-items: center !important;
+            top: 15px !important; left: 70px !important; 
+            width: 44px !important; height: 44px !important; 
+            display: flex !important; align-items: center !important;
             transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease, box-shadow 0.4s ease !important;
-            border-radius: 22px !important;
-            overflow: hidden !important;
+            border-radius: 22px !important; overflow: hidden !important;
         }
         .vjs-vlc-skin .vjs-volume-panel:hover {
             width: 140px !important;
@@ -121,87 +114,41 @@
         }
 
         .vjs-vlc-skin .vjs-mute-control {
-            width: 44px !important;
-            height: 44px !important;
-            z-index: 2 !important;
+            width: 44px !important; height: 44px !important; z-index: 2 !important;
             transition: color 0.3s ease, text-shadow 0.3s ease !important;
         }
         .vjs-vlc-skin .vjs-volume-panel:hover .vjs-mute-control {
-            color: var(--keeru-blue) !important;
-            text-shadow: 0 0 12px var(--keeru-glow) !important;
+            color: var(--keeru-blue) !important; text-shadow: 0 0 12px var(--keeru-glow) !important;
         }
 
         .vjs-vlc-skin .vjs-volume-control.vjs-volume-horizontal {
-            width: 80px !important;
-            opacity: 0 !important;
-            visibility: visible !important;
-            display: flex !important;
-            align-items: center !important;
-            transform: translateX(-20px) !important;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            margin-left: -5px !important;
-            pointer-events: none !important;
+            width: 80px !important; opacity: 0 !important; visibility: visible !important;
+            display: flex !important; align-items: center !important;
+            transform: translateX(-20px) !important; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            margin-left: -5px !important; pointer-events: none !important;
         }
         .vjs-vlc-skin .vjs-volume-panel:hover .vjs-volume-control {
-            opacity: 1 !important;
-            transform: translateX(0) !important;
-            pointer-events: auto !important;
+            opacity: 1 !important; transform: translateX(0) !important; pointer-events: auto !important;
         }
 
-        .vjs-vlc-skin .vjs-volume-bar {
-            margin: 0 !important;
-            width: 100% !important;
-            height: 4px !important;
-            border-radius: 4px !important;
-            background: rgba(255,255,255,0.2) !important;
-        }
-        .vjs-vlc-skin .vjs-volume-level {
-            background: linear-gradient(90deg, #1e5eff, var(--keeru-blue)) !important;
-            border-radius: 4px !important;
-            box-shadow: 0 0 10px var(--keeru-glow) !important;
-        }
+        .vjs-vlc-skin .vjs-volume-bar { margin: 0 !important; width: 100% !important; height: 4px !important; border-radius: 4px !important; background: rgba(255,255,255,0.2) !important; }
+        .vjs-vlc-skin .vjs-volume-level { background: linear-gradient(90deg, #1e5eff, var(--keeru-blue)) !important; border-radius: 4px !important; box-shadow: 0 0 10px var(--keeru-glow) !important; }
         .vjs-vlc-skin .vjs-volume-level:before {
-            content: "" !important;
-            width: 12px !important;
-            height: 12px !important;
-            background: #fff !important;
-            border-radius: 50% !important;
-            top: -4px !important;
-            right: -6px !important;
-            position: absolute !important;
-            box-shadow: 0 0 8px var(--keeru-blue) !important;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-            transform: scale(0.5);
+            content: "" !important; width: 12px !important; height: 12px !important; background: #fff !important;
+            border-radius: 50% !important; top: -4px !important; right: -6px !important; position: absolute !important;
+            box-shadow: 0 0 8px var(--keeru-blue) !important; opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important; transform: scale(0.5);
         }
         .vjs-vlc-skin .vjs-volume-panel:hover .vjs-volume-level:before { opacity: 1; transform: scale(1); }
 
         .vjs-vlc-skin .vjs-current-time { 
-            position: absolute !important; 
-            top: 25px !important; 
-            left: 125px !important; 
-            display: block !important; 
-            padding: 0 !important; 
+            position: absolute !important; top: 25px !important; left: 125px !important; 
+            display: block !important; padding: 0 !important; 
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
-        .vjs-vlc-skin .vjs-control-bar:has(.vjs-volume-panel:hover) .vjs-current-time {
-            transform: translateX(95px) !important;
-        }
+        .vjs-vlc-skin .vjs-control-bar:has(.vjs-volume-panel:hover) .vjs-current-time { transform: translateX(95px) !important; }
 
-        /* Bottom Row */
-        .vjs-vlc-skin .vjs-fullscreen-control { 
-            position: absolute !important; 
-            top: auto !important; 
-            bottom: 15px !important; 
-            right: 25px !important; 
-            width: 44px !important; 
-            height: 44px !important; 
-            display: flex !important; 
-            align-items: center; 
-            justify-content: center; 
-            border-radius: 50% !important;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        }
+        .vjs-vlc-skin .vjs-fullscreen-control { position: absolute !important; top: auto !important; bottom: 15px !important; right: 25px !important; width: 44px !important; height: 44px !important; display: flex !important; align-items: center; justify-content: center; border-radius: 50% !important; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
         .vjs-btn-speed { position: absolute !important; bottom: 15px !important; right: 75px !important; }
         .vjs-btn-subs { position: absolute !important; bottom: 15px !important; right: 125px !important; }
         .vjs-btn-audio { position: absolute !important; bottom: 15px !important; right: 175px !important; }
@@ -211,46 +158,12 @@
         .vjs-btn-forward { position: absolute !important; bottom: 15px !important; right: 350px !important; }
         .vjs-btn-rewind { position: absolute !important; bottom: 15px !important; right: 400px !important; }
 
-        /* Icon Resizing & Universal Hover Effects */
-        .vjs-button > .vjs-icon-placeholder:before {
-            font-size: 1.9em !important;
-            line-height: 2 !important;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-        }
+        .vjs-button > .vjs-icon-placeholder:before { font-size: 1.9em !important; line-height: 2 !important; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; }
+        .vjs-keeru-btn, .vjs-vlc-skin .vjs-fullscreen-control { width: 44px !important; height: 44px !important; border-radius: 50% !important; cursor: pointer; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; display: flex !important; align-items: center; justify-content: center; border: 1px solid transparent !important; }
+        .vjs-keeru-btn svg, .vjs-vlc-skin .vjs-fullscreen-control svg { width: 22px; height: 22px; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .vjs-keeru-btn:hover, .vjs-vlc-skin .vjs-fullscreen-control:hover { background: rgba(255,255,255,0.08) !important; border: 1px solid rgba(255,255,255,0.15) !important; color: var(--keeru-blue) !important; transform: translateY(-4px) scale(1.05) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 20px rgba(76,201,255,0.2) !important; }
+        .vjs-keeru-btn:active, .vjs-vlc-skin .vjs-fullscreen-control:active { transform: translateY(0) scale(0.95) !important; box-shadow: 0 0 5px rgba(76,201,255,0.4) !important; background: rgba(255,255,255,0.12) !important; }
 
-        .vjs-keeru-btn, .vjs-vlc-skin .vjs-fullscreen-control {
-            width: 44px !important;
-            height: 44px !important;
-            border-radius: 50% !important;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid transparent !important;
-        }
-        
-        .vjs-keeru-btn svg, .vjs-vlc-skin .vjs-fullscreen-control svg { 
-            width: 22px; 
-            height: 22px; 
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
-        }
-        
-        .vjs-keeru-btn:hover, .vjs-vlc-skin .vjs-fullscreen-control:hover { 
-            background: rgba(255,255,255,0.08) !important; 
-            border: 1px solid rgba(255,255,255,0.15) !important;
-            color: var(--keeru-blue) !important; 
-            transform: translateY(-4px) scale(1.05) !important;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 20px rgba(76,201,255,0.2) !important;
-        }
-
-        .vjs-keeru-btn:active, .vjs-vlc-skin .vjs-fullscreen-control:active {
-            transform: translateY(0) scale(0.95) !important;
-            box-shadow: 0 0 5px rgba(76,201,255,0.4) !important;
-            background: rgba(255,255,255,0.12) !important;
-        }
-
-        /* SVG Micro-Animations */
         .vjs-btn-rewind:hover svg { transform: translateX(-3px); }
         .vjs-btn-forward:hover svg { transform: translateX(3px); }
         .vjs-btn-speed:hover svg { transform: rotate(45deg); }
@@ -259,151 +172,133 @@
         .vjs-btn-subs:hover svg { transform: scale(1.1) translateY(-2px); }
         .vjs-vlc-skin .vjs-fullscreen-control:hover .vjs-icon-placeholder:before { transform: scale(1.15); }
 
-        /* Cinematic Floating Tooltips */
-        .vjs-vlc-skin .vjs-control-text {
-            position: absolute !important;
-            top: -45px !important;
-            left: 50% !important;
-            transform: translateX(-50%) translateY(10px) scale(0.9) !important;
-            background: rgba(15, 15, 20, 0.95) !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
-            color: #fff !important;
-            font-size: 10px !important;
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            font-weight: 800 !important;
-            letter-spacing: 1.5px !important;
-            padding: 8px 14px !important;
-            border-radius: 10px !important;
-            border: 1px solid rgba(255, 255, 255, 0.15) !important;
-            opacity: 0 !important;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
-            clip: auto !important; 
-            width: auto !important;
-            height: auto !important;
-            pointer-events: none !important;
-            text-transform: uppercase !important;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6), 0 0 15px rgba(76,201,255,0.1) !important;
-            z-index: 200 !important;
-            white-space: nowrap !important;
-        }
-
-        .vjs-keeru-btn:hover .vjs-control-text,
-        .vjs-vlc-skin .vjs-fullscreen-control:hover .vjs-control-text,
-        .vjs-vlc-skin .vjs-play-control:hover .vjs-control-text {
-            opacity: 1 !important;
-            transform: translateX(-50%) translateY(0) scale(1) !important;
-        }
+        /* Cinematic Tooltips */
+        .vjs-vlc-skin .vjs-control-text { position: absolute !important; top: -45px !important; left: 50% !important; transform: translateX(-50%) translateY(10px) scale(0.9) !important; background: rgba(15, 15, 20, 0.95) !important; backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important; color: #fff !important; font-size: 10px !important; font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 800 !important; letter-spacing: 1.5px !important; padding: 8px 14px !important; border-radius: 10px !important; border: 1px solid rgba(255, 255, 255, 0.15) !important; opacity: 0 !important; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important; clip: auto !important; width: auto !important; height: auto !important; pointer-events: none !important; text-transform: uppercase !important; box-shadow: 0 10px 25px rgba(0,0,0,0.6), 0 0 15px rgba(76,201,255,0.1) !important; z-index: 200 !important; white-space: nowrap !important; }
+        .vjs-keeru-btn:hover .vjs-control-text, .vjs-vlc-skin .vjs-fullscreen-control:hover .vjs-control-text, .vjs-vlc-skin .vjs-play-control:hover .vjs-control-text { opacity: 1 !important; transform: translateX(-50%) translateY(0) scale(1) !important; }
 
         .vjs-time-divider, .vjs-duration-display, .vjs-remaining-time { display: none !important; }
         .vjs-current-time-display { font-size: 12px !important; font-weight: 800 !important; letter-spacing: 1px; }
 
-        /* STATIC HIGH-CONTRAST SUBTITLES */
         .vjs-text-track-display { bottom: 125px !important; pointer-events: none !important; padding: 0 10% !important; }
-        .vjs-text-track-cue > div {
-            background-color: transparent !important;
-            color: var(--cue-color) !important;
-            font-size: var(--cue-size) !important;
-            font-weight: var(--cue-weight) !important;
-            line-height: 1.4 !important;
-            transition: none !important; 
-            text-shadow: 
-                -1.5px -1.5px 0 var(--cue-shadow),  1.5px -1.5px 0 var(--cue-shadow),
-                -1.5px  1.5px 0 var(--cue-shadow),  1.5px  1.5px 0 var(--cue-shadow),
-                 0px 5px 15px var(--cue-shadow) !important;
-            display: inline-block !important;
-            text-align: center !important;
-        }
+        .vjs-text-track-cue > div { background-color: transparent !important; color: var(--cue-color) !important; font-size: var(--cue-size) !important; font-weight: var(--cue-weight) !important; line-height: 1.4 !important; transition: none !important; text-shadow: -1.5px -1.5px 0 var(--cue-shadow),  1.5px -1.5px 0 var(--cue-shadow), -1.5px  1.5px 0 var(--cue-shadow),  1.5px  1.5px 0 var(--cue-shadow), 0px 5px 15px var(--cue-shadow) !important; display: inline-block !important; text-align: center !important; }
 
-        /* Top Bar Interface */
-        #top-bar {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100px;
-            background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%);
-            z-index: 150;
-            display: flex;
-            align-items: center;
-            padding: 0 40px;
-            transition: all 0.4s ease;
-        }
-
-        /* Pro Auto-Hide */
+        #top-bar { position: absolute; top: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%); z-index: 150; display: flex; align-items: center; padding: 0 40px; transition: all 0.4s ease; }
         .vjs-user-inactive.vjs-playing #top-bar { opacity: 0; transform: translateY(-15px); pointer-events: none; }
         .vjs-user-inactive.vjs-playing .vjs-control-bar { opacity: 0 !important; transform: translateY(25px) scale(0.98) !important; pointer-events: none !important; }
 
-        /* Premium Settings Panels */
-        .settings-overlay {
-            position: absolute;
-            bottom: 125px;
-            right: 30px;
-            width: 360px;
-            background: rgba(12, 12, 18, 0.95);
-            backdrop-filter: blur(50px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 32px;
-            padding: 28px;
-            z-index: 200;
-            display: none;
-            box-shadow: 0 30px 80px rgba(0,0,0,1);
-            transform-origin: bottom right;
-        }
+        .settings-overlay { position: absolute; bottom: 125px; right: 30px; width: 360px; background: rgba(12, 12, 18, 0.95); backdrop-filter: blur(50px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 32px; padding: 28px; z-index: 200; display: none; box-shadow: 0 30px 80px rgba(0,0,0,1); transform-origin: bottom right; pointer-events: auto !important; }
         .settings-overlay.active { display: block; animation: slideIn 0.35s cubic-bezier(0.2, 1, 0.3, 1); }
         @keyframes slideIn { from { transform: translateY(20px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
 
-        /* Custom Scrollbar for Subtitle Tracks */
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(76,201,255,0.3); border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(76,201,255,0.6); }
 
-        /* Splash Screen */
         #splash-screen { background: #000; z-index: 1000; }
-        .logo-butterfly {
-            filter: drop-shadow(0 0 45px var(--keeru-glow));
-            animation: butterflyHover 8s ease-in-out infinite;
-        }
+        .logo-butterfly { filter: drop-shadow(0 0 45px var(--keeru-glow)); animation: butterflyHover 8s ease-in-out infinite; }
         @keyframes butterflyHover { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.02); } }
+
+        /* =========================================
+           RESPONSIVE ARCHITECTURE (Mobiles/Tablets)
+           Auto-adapts layout on screens < 1024px
+           ========================================= */
+        @media screen and (max-width: 1024px) {
+            .vjs-vlc-skin .vjs-control-bar {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: space-evenly !important;
+                align-items: center !important;
+                gap: 6px !important;
+                height: auto !important;
+                min-height: 80px;
+                padding: 35px 10px 10px 10px !important; /* Top padding clears progress bar */
+                bottom: 10px !important; left: 10px !important; right: 10px !important;
+            }
+
+            /* Strip Absolute Positioning to allow Flexbox to arrange buttons correctly */
+            .vjs-vlc-skin .vjs-control,
+            .vjs-vlc-skin .vjs-volume-panel,
+            .vjs-keeru-btn,
+            .vjs-vlc-skin .vjs-fullscreen-control {
+                position: relative !important;
+                top: auto !important; bottom: auto !important; left: auto !important; right: auto !important;
+                transform: none !important;
+                pointer-events: auto !important;
+            }
+            
+            /* Smart Time Display Injection */
+            .vjs-vlc-skin .vjs-current-time {
+                position: relative !important;
+                top: auto !important; bottom: auto !important; left: auto !important; right: auto !important;
+                transform: none !important;
+                width: 100% !important; /* Forces time to its own row */
+                display: flex !important;
+                justify-content: center !important;
+                padding-bottom: 5px !important;
+                order: -1 !important; /* Locks time to top of the flex container */
+                pointer-events: auto !important;
+            }
+            
+            .vjs-vlc-skin .vjs-control-bar:has(.vjs-volume-panel:hover) .vjs-current-time { transform: none !important; }
+            .vjs-custom-divider { display: none !important; }
+            
+            /* Icon Resizing for Mobile Touch Targets */
+            .vjs-keeru-btn, .vjs-vlc-skin .vjs-fullscreen-control, .vjs-vlc-skin .vjs-play-control {
+                width: 44px !important; height: 44px !important;
+            }
+            .vjs-keeru-btn svg, .vjs-vlc-skin .vjs-fullscreen-control svg { width: 22px; height: 22px; }
+            .vjs-vlc-skin .vjs-volume-panel { width: 44px !important; height: 44px !important; }
+            .vjs-vlc-skin .vjs-volume-panel:hover { width: 110px !important; } 
+            
+            /* Progress Bar Re-docked slightly above icons */
+            .vjs-vlc-skin .vjs-progress-control {
+                position: absolute !important;
+                top: 0px !important; 
+                left: 15px !important; 
+                right: 15px !important;
+                height: 25px !important; /* Huge hit box for thumbs */
+                width: auto !important;
+            }
+            /* Inner visual line */
+            .vjs-vlc-skin .vjs-progress-control .vjs-progress-holder {
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                margin: 0 !important;
+            }
+
+            /* Responsive Overlays scaling */
+            #top-bar { height: 70px; padding: 0 20px; }
+            #top-bar button { width: 35px; height: 35px; }
+            .settings-overlay {
+                width: calc(100% - 20px) !important;
+                right: 10px !important; left: 10px !important;
+                bottom: 110px !important; /* Sits above mobile control bar */
+                padding: 20px !important;
+            }
+            .vjs-text-track-display { bottom: 100px !important; }
+            
+            /* Suppress Hover effects & Tooltips on Touch devices */
+            .vjs-keeru-btn:hover, .vjs-vlc-skin .vjs-fullscreen-control:hover { transform: none !important; box-shadow: none !important; background: transparent !important; border-color: transparent !important; }
+            .vjs-vlc-skin .vjs-control-text { display: none !important; }
+        }
 
         /* =========================================
            LIGHT MODE OVERRIDES
            ========================================= */
         body.light-mode { background-color: #f0f4f8 !important; color: #111 !important; }
-        body.light-mode .vjs-vlc-skin .vjs-control-bar {
-            background: rgba(255, 255, 255, 0.85) !important;
-            backdrop-filter: blur(20px) !important;
-            -webkit-backdrop-filter: blur(20px) !important;
-            border: 1px solid rgba(0, 0, 0, 0.1) !important;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
-        }
-        body.light-mode .vjs-vlc-skin .vjs-volume-panel:hover {
-            background: rgba(0, 0, 0, 0.05) !important;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05) !important;
-        }
+        body.light-mode .vjs-vlc-skin .vjs-control-bar { background: rgba(255, 255, 255, 0.85) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; border: 1px solid rgba(0, 0, 0, 0.1) !important; box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important; }
+        body.light-mode .vjs-vlc-skin .vjs-volume-panel:hover { background: rgba(0, 0, 0, 0.05) !important; box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05) !important; }
         body.light-mode .vjs-vlc-skin .vjs-volume-bar { background: rgba(0,0,0,0.2) !important; }
-        body.light-mode .vjs-keeru-btn:hover, body.light-mode .vjs-vlc-skin .vjs-fullscreen-control:hover, body.light-mode .vjs-vlc-skin .vjs-play-control:hover {
-            background: rgba(0,0,0,0.05) !important;
-            border-color: rgba(0,0,0,0.1) !important;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(76,201,255,0.2) !important;
-        }
-        body.light-mode .vjs-vlc-skin .vjs-control-text {
-            background: rgba(255, 255, 255, 0.95) !important;
-            color: #111 !important;
-            border: 1px solid rgba(0, 0, 0, 0.1) !important;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
-        }
-        body.light-mode .vjs-keeru-btn svg, body.light-mode .vjs-current-time-display, body.light-mode .vjs-button > .vjs-icon-placeholder:before {
-            color: #222 !important; text-shadow: none !important;
-        }
+        body.light-mode .vjs-keeru-btn:hover, body.light-mode .vjs-vlc-skin .vjs-fullscreen-control:hover, body.light-mode .vjs-vlc-skin .vjs-play-control:hover { background: rgba(0,0,0,0.05) !important; border-color: rgba(0,0,0,0.1) !important; box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 0 20px rgba(76,201,255,0.2) !important; }
+        body.light-mode .vjs-vlc-skin .vjs-control-text { background: rgba(255, 255, 255, 0.95) !important; color: #111 !important; border: 1px solid rgba(0, 0, 0, 0.1) !important; box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important; }
+        body.light-mode .vjs-keeru-btn svg, body.light-mode .vjs-current-time-display, body.light-mode .vjs-button > .vjs-icon-placeholder:before { color: #222 !important; text-shadow: none !important; }
         body.light-mode .vjs-custom-divider { color: rgba(0,0,0,0.2) !important; }
         body.light-mode #top-bar { background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, transparent 100%); }
         body.light-mode #top-bar button svg, body.light-mode #file-title { color: #222 !important; }
         body.light-mode #splash-screen { background: #f0f4f8 !important; }
         body.light-mode #splash-screen h1 { color: #111 !important; }
-        body.light-mode .settings-overlay {
-            background: rgba(255, 255, 255, 0.95) !important;
-            border: 1px solid rgba(0,0,0,0.1) !important;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
-        }
+        body.light-mode .settings-overlay { background: rgba(255, 255, 255, 0.95) !important; border: 1px solid rgba(0,0,0,0.1) !important; box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
         body.light-mode .settings-overlay h3, body.light-mode .settings-overlay p, body.light-mode .settings-overlay span { color: #222 !important; }
         body.light-mode .settings-overlay .bg-white\/5 { background-color: rgba(0,0,0,0.05) !important; color: #111 !important; }
         body.light-mode .settings-overlay .hover\:bg-white\/10:hover { background-color: rgba(0,0,0,0.1) !important; }
@@ -411,20 +306,18 @@
 </head>
 <body>
 
-    <!-- Standard Top Interface -->
     <div id="top-bar" class="opacity-0">
-        <button onclick="location.reload()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/10 mr-6 transition-all active:scale-90">
+        <button onclick="location.reload()" class="flex items-center justify-center rounded-full hover:bg-white/10 transition-all active:scale-90">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="flex-1 min-w-0">
-            <h2 id="file-title" class="text-xl font-black truncate text-white/90 tracking-tight uppercase">CORE STREAM</h2>
+            <h2 id="file-title" class="text-lg md:text-xl font-black truncate text-white/90 tracking-tight uppercase">CORE STREAM</h2>
         </div>
     </div>
 
-    <!-- Splash Screen -->
     <div id="splash-screen" class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 transition-opacity duration-1000">
         <div class="max-w-3xl w-full">
-            <div class="logo-butterfly mb-12 h-80">
+            <div class="logo-butterfly mb-8 md:mb-12 h-48 md:h-80">
                 <svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
                     <defs>
                         <radialGradient id="wingMain" cx="50%" cy="45%" r="70%">
@@ -449,8 +342,8 @@
                     </g>
                 </svg>
             </div>
-            <h1 class="text-8xl font-black mb-16 tracking-tighter italic uppercase text-white">KEERU<span class="text-[#4cc9ff]">.MEDIA</span></h1>
-            <button id="select-btn" class="bg-[#4cc9ff] hover:bg-[#1e5eff] text-white font-black py-7 px-28 rounded-full transition-all transform hover:scale-110 shadow-[0_20px_60px_rgba(76,201,255,0.4)] uppercase tracking-[0.5em] text-xs">Launch Fielding set</button>
+            <h1 class="text-5xl md:text-8xl font-black mb-12 tracking-tighter italic uppercase text-white">KEERU<span class="text-[#4cc9ff]">.MEDIA</span></h1>
+            <button id="select-btn" class="bg-[#4cc9ff] hover:bg-[#1e5eff] text-white font-black py-5 px-12 md:py-7 md:px-28 rounded-full transition-all transform hover:scale-110 shadow-[0_20px_60px_rgba(76,201,255,0.4)] uppercase tracking-[0.5em] text-[10px] md:text-xs">Launch Fielding set</button>
             <input type="file" id="file-input" class="hidden" accept="video/*,.srt,.vtt" multiple>
         </div>
     </div>
@@ -462,16 +355,12 @@
             Visual Matrix
         </h3>
         <div class="space-y-7">
-            
-            <!-- Dynamic Subtitle Track Selector -->
             <div>
                 <p class="text-[9px] font-bold text-zinc-500 mb-3 px-1 uppercase tracking-[0.2em]">Active Subtitle Track</p>
                 <div id="sub-track-list" class="space-y-2 max-h-[140px] overflow-y-auto custom-scrollbar pr-1">
                     <p class="text-[10px] text-zinc-600 italic text-center uppercase tracking-widest py-2">Scanning matrix...</p>
                 </div>
             </div>
-
-            <!-- Font Size Scaling -->
             <div>
                 <p class="text-[9px] font-bold text-zinc-500 mb-3 px-1 uppercase tracking-[0.2em]">Matrix Scaling</p>
                 <div class="flex gap-2 p-1 bg-white/5 rounded-2xl border border-white/5">
@@ -481,8 +370,6 @@
                     <button class="flex-1 py-3 rounded-xl hover:bg-white/10 text-[10px] font-black transition-all" onclick="calibrateSubs('2.8em', this)">XL</button>
                 </div>
             </div>
-            
-            <!-- Chromatic Color Palette -->
             <div>
                 <p class="text-[9px] font-bold text-zinc-500 mb-3 px-1 uppercase tracking-[0.2em]">Chromatic Profile</p>
                 <div class="grid grid-cols-6 gap-3">
@@ -494,8 +381,6 @@
                     <button class="h-8 rounded-full bg-[#fb923c] transition-all sub-col-btn hover:scale-110" onclick="setSubCol('#fb923c', this)"></button>
                 </div>
             </div>
-
-            <!-- External Injection Button -->
             <button class="w-full py-4 rounded-2xl bg-gradient-to-r from-[#4cc9ff]/10 to-[#1e5eff]/10 hover:from-[#4cc9ff]/20 hover:to-[#1e5eff]/20 text-[#4cc9ff] text-[10px] font-black uppercase tracking-[0.2em] border border-[#4cc9ff]/30 transition-all flex items-center justify-center gap-2 group shadow-[0_5px_20px_rgba(76,201,255,0.1)]" onclick="document.getElementById('sub-input').click()">
                 <svg class="w-4 h-4 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                 Inject External .SRT
@@ -524,7 +409,24 @@
     </div>
 
     <!-- Video Area -->
-    <div class="flex-1 relative bg-black">
+    <div class="flex-1 relative bg-black overflow-hidden">
+        <!-- Seek Feedback Indicators -->
+        <div id="seek-fb-left" class="absolute top-1/2 left-[15%] -translate-y-1/2 bg-black/60 backdrop-blur-md rounded-full w-20 h-20 flex flex-col items-center justify-center opacity-0 transition-all duration-300 z-[300] pointer-events-none scale-90">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5 5-5M18 17l-5-5 5-5"/></svg>
+            <span class="text-xs font-black text-white mt-1">-5s</span>
+        </div>
+        
+        <!-- Play/Pause Feedback Indicator -->
+        <div id="seek-fb-center" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/60 backdrop-blur-md rounded-full w-20 h-20 flex flex-col items-center justify-center opacity-0 transition-all duration-300 z-[300] pointer-events-none scale-90">
+            <svg id="fb-play-icon" class="w-10 h-10 text-white hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="fb-pause-icon" class="w-10 h-10 text-white hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </div>
+
+        <div id="seek-fb-right" class="absolute top-1/2 right-[15%] -translate-y-1/2 bg-black/60 backdrop-blur-md rounded-full w-20 h-20 flex flex-col items-center justify-center opacity-0 transition-all duration-300 z-[300] pointer-events-none scale-90">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 17l5-5-5-5M6 17l5-5-5-5"/></svg>
+            <span class="text-xs font-black text-white mt-1">+5s</span>
+        </div>
+
         <video id="vlc-player" class="video-js vjs-vlc-skin" crossorigin="anonymous" playsinline></video>
     </div>
 
@@ -532,7 +434,7 @@
 
     <script>
         /**
-         * Keeru Media Player - Ultimate Structured UI
+         * Keeru Media Player - Responsive & Auto-Orientation Engine
          */
 
         const icons = {
@@ -551,6 +453,10 @@
             autoplay: false,
             inactivityTimeout: 1800,
             playbackRates: [0.5, 1, 1.25, 1.5, 2, 2.5, 3],
+            userActions: {
+                click: false,       // We will manually handle single clicks
+                doubleClick: false  // We will manually handle custom double taps
+            },
             controlBar: {
                 children: [
                     'playToggle',
@@ -565,10 +471,18 @@
         player.ready(() => {
             const controlBar = player.getChild('controlBar');
 
+            // Move the overlays INSIDE the player element so they render correctly during Fullscreen
+            const playerEl = player.el();
+            playerEl.appendChild(document.getElementById('sub-settings'));
+            playerEl.appendChild(document.getElementById('audio-settings'));
+
+            // Core mechanism overriding VideoJS's handleClick for perfect mobile tap recognition
             const addKeeruBtn = (name, svg, handler, customClass) => {
                 const btn = controlBar.addChild('button', { className: `vjs-keeru-btn vjs-control vjs-button ${customClass}`, controlText: name });
                 btn.el().innerHTML = `<div class="vjs-icon-placeholder">${svg}</div>`;
-                btn.on('click', () => handler(btn));
+                btn.handleClick = () => {
+                    handler(btn);
+                };
             };
 
             addKeeruBtn('Rewind', icons.rewind, () => player.currentTime(player.currentTime() - 10), 'vjs-btn-rewind');
@@ -590,6 +504,12 @@
             addKeeruBtn('Audio', icons.voices, () => togglePanel('audio-settings'), 'vjs-btn-audio');
             addKeeruBtn('Subs', icons.matrix, () => togglePanel('sub-settings'), 'vjs-btn-subs');
             addKeeruBtn('Speed', icons.speed, () => togglePanel('audio-settings'), 'vjs-btn-speed');
+
+            // Set up Auto-Orientation logic
+            setupAutoOrientation();
+            
+            // Setup Unified Tap & Double-Tap Logic
+            setupSmartSeeking();
         });
 
         const UI = {
@@ -610,6 +530,7 @@
 
         function togglePanel(id) {
             const el = document.getElementById(id);
+            if (!el) return;
             const wasActive = el.classList.contains('active');
             document.querySelectorAll('.settings-overlay').forEach(p => p.classList.remove('active'));
             if (!wasActive) { 
@@ -661,7 +582,6 @@
             const list = document.getElementById('sub-track-list');
             list.innerHTML = '';
             
-            // Add a "Turn Off" option
             const offBtn = document.createElement('div');
             let anyShowing = Array.from(tracks).some(t => t.kind === 'subtitles' && t.mode === 'showing');
             offBtn.className = `flex items-center gap-3 p-3 rounded-2xl hover:bg-white/10 cursor-pointer transition-all ${!anyShowing ? 'border border-[#4cc9ff]/30 bg-[#4cc9ff]/5 shadow-[0_0_15px_rgba(76,201,255,0.1)]' : 'border border-white/5 bg-white/5'}`;
@@ -753,6 +673,141 @@
             }, 400);
         }
 
+        // Auto-Orientation Hardware Detection
+        function setupAutoOrientation() {
+            const handleOrientationChange = () => {
+                if (!player) return;
+                const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+                
+                try {
+                    if (isLandscape && !player.isFullscreen()) {
+                        player.requestFullscreen().catch(e => console.log('Auto-fullscreen blocked without user gesture.'));
+                    } else if (!isLandscape && player.isFullscreen()) {
+                        player.exitFullscreen().catch(e => console.log('Exit fullscreen error.'));
+                    }
+                } catch (err) {}
+            };
+
+            window.addEventListener("orientationchange", handleOrientationChange);
+            if (screen.orientation) {
+                screen.orientation.addEventListener("change", handleOrientationChange);
+            }
+        }
+        
+        // Smart Single-Tap & Double-Tap Logic
+        function setupSmartSeeking() {
+            let lastTap = 0;
+            let tapTimeout;
+            let isSwiping = false;
+            let touchHandled = false;
+
+            function triggerSeekFeedback(side) {
+                const el = document.getElementById(`seek-fb-${side}`);
+                el.style.opacity = '1';
+                
+                if (side === 'center') {
+                    el.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                } else {
+                    el.style.transform = 'translateY(-50%) scale(1.1)';
+                }
+                
+                clearTimeout(el.fbTimeout);
+                el.fbTimeout = setTimeout(() => {
+                    el.style.opacity = '0';
+                    if (side === 'center') {
+                        el.style.transform = 'translate(-50%, -50%) scale(0.9)';
+                    } else {
+                        el.style.transform = 'translateY(-50%) scale(0.9)';
+                    }
+                }, 400);
+            }
+
+            const tapTarget = player.el();
+
+            // Detect swipes so we don't accidentally tap when user is scrolling the page
+            tapTarget.addEventListener('touchstart', () => { isSwiping = false; }, { passive: true });
+            tapTarget.addEventListener('touchmove', () => { isSwiping = true; }, { passive: true });
+
+            const processTap = (e) => {
+                // Ignore if it was a swipe gesture
+                if (e.type.includes('touch') && isSwiping) return;
+
+                // Prevent intercepting clicks inside menus or control bars
+                if (e.target.closest('.vjs-control-bar') || e.target.closest('.settings-overlay') || e.target.closest('#top-bar') || e.target.closest('button')) return;
+
+                // Do not trigger video actions if the user just clicked to close an open settings menu
+                const isOverlayActive = Array.from(document.querySelectorAll('.settings-overlay')).some(el => el.classList.contains('active'));
+                if (isOverlayActive) return;
+
+                const now = Date.now();
+                const tapDiff = now - lastTap;
+                
+                const rect = tapTarget.getBoundingClientRect();
+                
+                // Get precise coordinates regardless of mouse vs touch
+                let clientX;
+                if (e.type.includes('touch')) {
+                    clientX = e.changedTouches[0].clientX;
+                    touchHandled = true;
+                } else {
+                    if (touchHandled) {
+                        touchHandled = false; // Reset flag and abort duplicate event
+                        return;
+                    }
+                    clientX = e.clientX;
+                }
+                        
+                const x = clientX - rect.left;
+                const width = rect.width;
+
+                // --- MIDDLE ZONE (33% to 66%) - INSTANT SINGLE TAP PLAY/PAUSE ---
+                if (x > width * 0.33 && x < width * 0.66) {
+                    if(e.cancelable && e.type.includes('touch')) e.preventDefault();
+                    clearTimeout(tapTimeout);
+                    lastTap = 0; // Prevent interfering with side taps by resetting
+                    
+                    if (player.paused()) {
+                        player.play();
+                        document.getElementById('fb-play-icon').classList.remove('hidden');
+                        document.getElementById('fb-pause-icon').classList.add('hidden');
+                    } else {
+                        player.pause();
+                        document.getElementById('fb-play-icon').classList.add('hidden');
+                        document.getElementById('fb-pause-icon').classList.remove('hidden');
+                    }
+                    triggerSeekFeedback('center');
+                    return;
+                }
+
+                // --- SIDE ZONES (<33% or >66%) - DOUBLE TAP SEEK ---
+                if (tapDiff > 0 && tapDiff < 300) {
+                    // DOUBLE TAP Confirmed
+                    if(e.cancelable && e.type.includes('touch')) e.preventDefault();
+                    clearTimeout(tapTimeout); 
+                    
+                    if (x <= width * 0.33) {
+                        player.currentTime(Math.max(0, player.currentTime() - 5));
+                        triggerSeekFeedback('left');
+                    } else if (x >= width * 0.66) {
+                        player.currentTime(Math.min(player.duration(), player.currentTime() + 5));
+                        triggerSeekFeedback('right');
+                    }
+                    lastTap = 0;
+                } else {
+                    // SINGLE TAP (Wait to confirm it's not a double tap)
+                    lastTap = now;
+                    tapTimeout = setTimeout(() => {
+                        // Toggle UI visibility for side single-taps
+                        player.userActive(!player.userActive());
+                    }, 300);
+                }
+            };
+
+            // Use touchend for precise mobile taps, and click for everything else
+            tapTarget.addEventListener('touchend', processTap, { passive: false });
+            tapTarget.addEventListener('click', processTap);
+        }
+
         UI.selectBtn.onclick = () => UI.fileInput.click();
         UI.fileInput.onchange = (e) => handleFiles(e.target.files);
         UI.subInput.onchange = (e) => { if (e.target.files[0]) loadSubtitle(e.target.files[0]); };
@@ -760,9 +815,8 @@
         player.on('useractive', () => UI.topBar.classList.remove('opacity-0'));
         player.on('userinactive', () => { if(!player.paused()) UI.topBar.classList.add('opacity-0'); });
         
-        // Remove click-outside closer since hover logic is handling it now
-        // But keep for buttons
-        player.on('click', (e) => {
+        // Touch/click detection to close panels when interacting elsewhere
+        player.on(['click', 'touchend'], (e) => {
             if (e.target.tagName !== 'BUTTON' && !e.target.closest('.settings-overlay') && !e.target.closest('.vjs-keeru-btn')) {
                 document.querySelectorAll('.settings-overlay').forEach(p => p.classList.remove('active'));
             }
@@ -784,7 +838,6 @@
                     tracks.forEach((t, i) => t.mode = (i === next ? 'showing' : 'disabled'));
                     if(document.getElementById('sub-settings').classList.contains('active')) updateSubtitleTracks();
                 } else {
-                    // Automatically open file picker if no subtitle tracks are loaded
                     document.getElementById('sub-input').click();
                 }
             }
@@ -792,7 +845,6 @@
                 if (player.isFullscreen()) { player.exitFullscreen(); } else { player.requestFullscreen(); }
             }
             
-            // Advanced Navigation & Volume Shortcuts
             if (e.code === 'ArrowUp') {
                 e.preventDefault();
                 player.volume(Math.min(1, player.volume() + 0.1));
